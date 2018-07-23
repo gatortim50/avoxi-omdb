@@ -24,7 +24,7 @@
 ### clone poject
 
 ```js
-  git clone git@gitlab.com:timothy.mckee/avoxi-test.git
+  git clone git@github.com:gatortim50/avoxi-test.git
 ```
 
 ### install dependencies
