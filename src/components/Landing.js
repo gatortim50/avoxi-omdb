@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 const initialState = {
-  detailsList: [],
-}
+  detailsList: []
+};
 class Landing extends Component {
-  state = initialState
+  state = initialState;
 
   render() {
-    console.log('landing movie detail props: ', this.props.movies.movies)
-    const { detail } = this.props.movies.movies
-    if (detail) {
-    }
+    console.log('landing movie detail props: ', this.props.movies.movies);
+
     return (
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col" />
@@ -32,18 +30,18 @@ class Landing extends Component {
           </tr>
         </tbody>
       </table>
-    )
+    );
   }
 }
 
 Landing.propTypes = {
   movies: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired,
-}
+  errors: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   movies: state.movies,
-  errors: state.errors,
-})
+  errors: state.errors
+});
 
-export default connect(mapStateToProps)(Landing)
+export default connect(mapStateToProps)(Landing);
